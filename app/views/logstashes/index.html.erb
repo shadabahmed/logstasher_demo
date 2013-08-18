@@ -1,0 +1,21 @@
+<h1>Listing logstashes</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @logstashes.each do |logstash| %>
+  <tr>
+    <td><%= link_to 'Show', logstash %></td>
+    <td><%= link_to 'Edit', edit_logstash_path(logstash) %></td>
+    <td><%= link_to 'Destroy', logstash, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Logstash', new_logstash_path %>

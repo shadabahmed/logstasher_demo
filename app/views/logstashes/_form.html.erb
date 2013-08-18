@@ -1,0 +1,17 @@
+<%= form_for(@logstash) do |f| %>
+  <% if @logstash.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@logstash.errors.count, "error") %> prohibited this logstash from being saved:</h2>
+
+      <ul>
+      <% @logstash.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
